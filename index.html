@@ -132,6 +132,10 @@
   .num { font-family: Fraunces, Georgia, serif; font-size: 36px; color: var(--accent); line-height: 1; }
   .ico { display: block; color: var(--accent); }
 
+  .video-shell { border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: #000; }
+.video-shell video,
+.video-shell iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+
   /* ---- loop steps ---- */
   .loop { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; margin-top: 44px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
   .loop > div { background: var(--card); padding: 32px; border-right: 1px solid var(--line); }
@@ -207,17 +211,16 @@
   </div>
 </header>
 
-<div class="video-band" id="video">
-  <div class="wrap">
-    <span class="kicker">The pitch</span>
-    <h2>Two minutes on what we're building</h2>
-    <div class="video-shell" style="margin-top:32px">
-      <video controls preload="metadata" src="https://youtu.be/JEG7uyQ5jZI">
-        Your browser does not support embedded video.
-      </video>
-    </div>
-   
-  </div>
+  <div class="video-shell" style="margin-top:32px">
+  <iframe
+    width="100%"
+    height="560"
+    src="https://www.youtube.com/embed/JEG7uyQ5jZI?rel=0"
+    title="Kinetic Coach pitch"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
 </div>
 
 <section id="problem">
